@@ -139,7 +139,7 @@ def mutacion(hijo, Pmuta):
     return hijo
 def convergenciaMejorInd(pesosIndividuos, mejor_aptitud_anterior, iter_sin_mejora):
     mejor_aptitud_actual = np.max(pesosIndividuos)
-    if mejor_aptitud_actual > mejor_aptitud_anterior:  # Comparación corregida aquí
+    if mejor_aptitud_actual > mejor_aptitud_anterior:  
         iter_sin_mejora = 0
     else:
         iter_sin_mejora += 1
