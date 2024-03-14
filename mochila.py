@@ -137,7 +137,7 @@ def mutacion(hijo, Pmuta):
             else:
                 hijo[i] = 0
     return hijo
-def convergenciaMejorInd(pesosIndividuos, mejor_aptitud_anterior, iter_sin_mejora, max_iter_sin_mejora):
+def convergenciaMejorInd(pesosIndividuos, mejor_aptitud_anterior, iter_sin_mejora):
     mejor_aptitud_actual = np.max(pesosIndividuos)
     if mejor_aptitud_actual > mejor_aptitud_anterior:  # Comparación corregida aquí
         iter_sin_mejora = 0
@@ -219,7 +219,7 @@ for iter in range(100):
 
     ##### imprime la tabla de la iteracion
     imprime(n,total,fitness,pesosIndividuos,poblIt)
-    iter_sin_mejora=convergenciaMejorInd(pesosIndividuos, mejor_aptitud_anterior, iter_sin_mejora, max_iter_sin_mejora)
+    iter_sin_mejora=convergenciaMejorInd(pesosIndividuos, mejor_aptitud_anterior, iter_sin_mejora)
     if iter_sin_mejora >= max_iter_sin_mejora:
             print("El algoritmo ha convergido. Terminando las iteraciones.")
             break
